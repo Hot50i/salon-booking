@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Salon Bookings</title>
+
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+   <% if (success && success.length > 0) { %>
+    <div class="flash-message success">
+        <%= success %>
+    </div>
+<% } %>
+
+<% if (error && error.length > 0) { %>
+    <div class="flash-message error">
+        <%= error %>
+    </div>
+<% } %>
+
+    <h1>Salon Bookings</h1>
+    <div class="mb-4">
+
+    <a href="/" class="btn btn-dark">
+        ← Back to Dashboard
+    </a>
+
+
+    <form action="/bookings" method="GET" class="booking-search">
+
+    <input
+        type="text"
+        name="search"
+        placeholder="Search by name or email"
+        value="<%= search %>"
+    >
+
+    <button type="submit">
+        Search
+    </button>
+
+</form>
+
+</div>
+
+    <div class="booking-container">
+
+        <% bookings.forEach(booking => { %>
+
+            <div class="booking-card">
+
+                <h2><%= booking.name %></h2>
+
+                <p><strong>Email:</strong> <%= booking.email %></p>
+
+                <p><strong>Phone:</strong> <%= booking.phone %></p>
+
+                <p><strong>Service:</strong> <%= booking.service %></p>
+
+                <p><strong>Date:</strong> <%= booking.date %></p>
+
+                <p><strong>Time:</strong> <%= booking.time %></p>
+
+                <p>
+                    <strong>Status:</strong>
+                    <%= booking.status %>
+                </p>
+
+                <div class="booking-buttons">
+
+                    <% if (booking.status === "Pending") { %>
+
+                        <form action="/bookings/<%= booking._id %>/confirm" method="POST">
+                            <button type="submit">Confirm</button>
+                        </form>
+
+                        <form action="/bookings/<%= booking._id %>/cancel" method="POST">
+                            <button type="submit">Cancel</button>
+                        </form>
+
+                    <% } else if (booking.status === "Confirmed") { %>
+
+                        <form action="/bookings/<%= booking._id %>/complete" method="POST">
+                            <button type="submit">Mark Completed</button>
+                        </form>
+
+                        <form action="/bookings/<%= booking._id %>/cancel" method="POST">
+                            <button type="submit">Cancel</button>
+                        </form>
+
+                    <% } else if (booking.status === "Completed") { %>
+
+                        <p>Appointment completed.</p>
+
+                    <% } else if (booking.status === "Cancelled") { %>
+
+                        <p>Booking cancelled.</p>
+
+                    <% } %>
+
+                    <a href="/bookings/<%= booking._id %>/edit">
+                        Edit
+                    </a>
+
+                    <form action="/bookings/<%= booking._id %>" method="POST">
+                        <button type="submit">Delete</button>
+                    </form>
+
+                </div>
+
+            </div>
+
+        <% }) %>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Status</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+    <h1>Booking Status</h1>
+
+    <div class="booking-card">
+
+        <h2><%= booking.name %></h2>
+
+        <p>
+            <strong>Email:</strong>
+            <%= booking.email %>
+        </p>
+
+        <p>
+            <strong>Phone:</strong>
+            <%= booking.phone %>
+        </p>
+
+        <p>
+            <strong>Service:</strong>
+            <%= booking.service %>
+        </p>
+
+        <p>
+            <strong>Date:</strong>
+            <%= booking.date %>
+        </p>
+
+        <p>
+            <strong>Time:</strong>
+            <%= booking.time %>
+        </p>
+
+        <p>
+            <strong>Status:</strong>
+            <%= booking.status %>
+        </p>
+
+        <% if (booking.status === "Pending") { %>
+
+            <p>Your booking is waiting for confirmation.</p>
+
+        <% } else if (booking.status === "Confirmed") { %>
+
+            <p>Your appointment has been confirmed. See you soon!</p>
+
+        <% } else if (booking.status === "Completed") { %>
+
+            <p>Your appointment has been completed. Thank you for visiting us!</p>
+
+        <% } else if (booking.status === "Cancelled") { %>
+
+            <p>Your booking has been cancelled.</p>
+
+        <% } %>
+
+    </div>
+
+    <a href="/booking-status">Check another booking</a>
+
+</body>
+</html>
+

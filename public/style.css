@@ -1,0 +1,1423 @@
+.flash-message {
+    position: fixed;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #e8d8cc;
+    color: #222;
+    padding: 15px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    z-index: 9999;
+}
+
+.error-message {
+    position: fixed;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #e8d8cc;
+    color: #222;
+    padding: 15px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    z-index: 9999;
+}
+
+
+
+
+
+
+
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f8f5f2;
+    color: #333;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.main-nav {
+    background: #222;
+    padding: 20px 50px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.main-nav .container-fluid {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    color: white !important;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+/* Navigation links */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.nav-links a:hover {
+    color: #e8d8cc;
+}
+
+
+/* Welcome username */
+
+.welcome-user {
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 10px;
+    display: inline-block;
+}
+
+
+/* Logout */
+
+.logout-btn {
+    color: white !important;
+    text-decoration: none;
+}
+
+.logout-btn:hover {
+    color: #e8d8cc !important;
+}
+
+
+/* Book appointment */
+
+.nav-book-btn {
+    background: #e8d8cc;
+    color: #222 !important;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.nav-book-btn:hover {
+    background: white;
+    color: #222 !important;
+}
+
+
+/* Bootstrap hamburger */
+
+.navbar-toggler {
+    border: 1px solid #e8d8cc !important;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none !important;
+}
+
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+
+
+/* =========================
+   SERVICES DROPDOWN
+========================= */
+
+.services-dropdown {
+    position: relative;
+}
+
+.services-dropdown-link {
+    display: block;
+}
+
+.services-dropdown-menu {
+    display: none;
+
+    position: absolute;
+
+    top: 100%;
+    left: 0;
+
+    min-width: 200px;
+
+    background: #222;
+
+    padding: 10px 0;
+
+    border-radius: 5px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+    z-index: 2000;
+}
+
+.services-dropdown-menu a {
+    display: block;
+
+    width: 100%;
+
+    padding: 12px 18px;
+
+    color: white;
+
+    text-decoration: none;
+}
+
+.services-dropdown-menu a:hover {
+    background: #444;
+
+    color: #e8d8cc;
+}
+
+.services-dropdown:hover .services-dropdown-menu {
+    display: block;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 700px;
+
+    position: relative;
+
+    background-image: url("/salon-hero.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 80px 20px;
+
+    color: white;
+}
+
+
+/* Hero overlay */
+
+.hero-overlay {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background: rgba(0, 0, 0, 0.45);
+}
+
+
+/* Hero content */
+
+.hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 800px;
+
+    margin: auto;
+}
+
+.hero-small,
+.section-small {
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 65px;
+
+    line-height: 1.1;
+
+    margin-bottom: 25px;
+}
+
+.hero p {
+    font-size: 20px;
+
+    line-height: 1.6;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn {
+    display: inline-block;
+
+    background: #222;
+
+    color: white;
+
+    padding: 15px 30px;
+
+    text-decoration: none;
+
+    border-radius: 5px;
+
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #444;
+}
+
+
+/* Hero button */
+
+.hero .btn {
+    background: white;
+
+    color: #222;
+
+    padding: 15px 30px;
+
+    border-radius: 5px;
+
+    font-weight: bold;
+}
+
+.hero .btn:hover {
+    background: #e8d8cc;
+
+    color: #222;
+}
+
+
+/* Hero buttons */
+
+.hero-buttons {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+
+/* Secondary hero button */
+
+.hero-secondary-btn {
+    display: inline-block;
+
+    padding: 15px 30px;
+
+    border: 2px solid white;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 5px;
+
+    font-weight: bold;
+}
+
+.hero-secondary-btn:hover {
+    background: white;
+
+    color: #222;
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+.services {
+    padding: 90px 30px;
+
+    text-align: center;
+
+    background: #f8f5f2;
+}
+
+.services h2,
+.about h2,
+.stylists h2,
+.gallery h2,
+.contact h2 {
+    font-size: 40px;
+
+    margin-bottom: 20px;
+}
+
+.section-description {
+    max-width: 600px;
+
+    margin: 0 auto 45px;
+
+    line-height: 1.6;
+}
+
+
+/* Service cards */
+
+.service-container {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+}
+
+.service-card {
+    background: white;
+
+    width: 280px;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+}
+
+
+/* Service images */
+
+.service-card img {
+    width: 100%;
+
+    height: 220px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+
+    display: block;
+
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    font-size: 23px;
+
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    line-height: 1.6;
+
+    margin-bottom: 20px;
+}
+
+.service-card strong {
+    font-size: 22px;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    background: #e8d8cc;
+
+    padding: 100px 30px;
+
+    text-align: center;
+}
+
+.about-content {
+    max-width: 700px;
+
+    margin: auto;
+}
+
+.about-content p {
+    line-height: 1.7;
+
+    margin-bottom: 20px;
+}
+
+.about-content .btn {
+    margin-top: 15px;
+}
+
+
+/* =========================
+   STYLISTS
+========================= */
+
+.stylists {
+    padding: 90px 30px;
+
+    text-align: center;
+
+    background: #f8f5f2;
+}
+
+.stylist-container {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    flex-wrap: wrap;
+
+    margin-top: 45px;
+}
+
+.stylist-card {
+    background: white;
+
+    width: 280px;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.stylist-card img {
+    width: 100%;
+
+    height: 250px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+
+    display: block;
+
+    margin-bottom: 20px;
+}
+
+.stylist-image {
+    height: 220px;
+
+    background: #e8d8cc;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+}
+
+.stylist-card h3 {
+    font-size: 22px;
+
+    margin-bottom: 8px;
+}
+
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery {
+    padding: 90px 30px;
+
+    text-align: center;
+
+    background: #f8f5f2;
+}
+
+.gallery-container {
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: 45px auto 0;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.gallery-item {
+    width: 100%;
+
+    overflow: hidden;
+
+    background: white;
+
+    border-radius: 10px;
+
+    padding-bottom: 15px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.gallery-item img {
+    width: 100%;
+
+    height: 300px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.gallery-item h3 {
+    margin-top: 15px;
+
+    font-size: 20px;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+    padding: 100px 30px;
+
+    text-align: center;
+
+    background: #e8d8cc;
+}
+
+.contact p {
+    margin-bottom: 30px;
+}
+
+.contact-container {
+    max-width: 1000px;
+
+    margin: auto;
+}
+
+.contact-item {
+    margin: 35px 0;
+}
+
+.contact-item h3 {
+    margin-bottom: 10px;
+}
+
+.contact-item a {
+    color: #333;
+}
+
+
+/* WhatsApp button */
+
+.whatsapp-button {
+    display: inline-block;
+
+    padding: 12px 25px;
+
+    background: #25D366;
+
+    color: white !important;
+
+    text-decoration: none;
+
+    border-radius: 5px;
+
+    margin-top: 10px;
+}
+
+.whatsapp-button:hover {
+    opacity: 0.85;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #222;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 50px 20px;
+}
+
+footer .logo {
+    margin-bottom: 15px;
+}
+
+footer p {
+    margin-top: 10px;
+
+    color: #ddd;
+}
+
+
+/* =========================
+   BACKGROUND PHOTO
+========================= */
+
+.background {
+    min-height: 100vh;
+
+    background-image:
+        linear-gradient(
+            rgba(34, 34, 34, 0.45),
+            rgba(34, 34, 34, 0.45)
+        ),
+        url("/images-girl.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
+}
+
+
+/* =========================
+   BOOKING SEARCH
+========================= */
+
+.booking-search {
+    display: flex;
+
+    gap: 10px;
+
+    margin-bottom: 20px;
+}
+
+.booking-search input {
+    padding: 10px;
+
+    width: 300px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 5px;
+}
+
+.booking-search button {
+    padding: 10px 20px;
+
+    border: none;
+
+    background: #222;
+
+    color: white;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+.booking-search button:hover {
+    background: #444;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 991px) {
+
+    .main-nav {
+        padding: 15px 20px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+
+        width: 100%;
+    }
+
+    .nav-links a {
+        width: 100%;
+    }
+
+    .welcome-user {
+        margin: 5px 0;
+    }
+
+    .nav-book-btn {
+        width: 100%;
+
+        text-align: center;
+    }
+
+    .services-dropdown {
+        width: 100%;
+    }
+
+    .services-dropdown-menu {
+        position: static;
+
+        width: 100%;
+
+        box-shadow: none;
+
+        margin-top: 5px;
+    }
+
+    .hero h1 {
+        font-size: 50px;
+    }
+
+    .gallery-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .main-nav {
+        padding: 15px 20px;
+    }
+
+    .main-nav .container-fluid {
+        padding: 0;
+    }
+
+
+    /* Hero */
+
+    .hero {
+        min-height: 600px;
+
+        padding: 60px 20px;
+
+        background-position: center;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+
+    /* Hero buttons */
+
+    .hero-buttons {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .hero .btn,
+    .hero-secondary-btn {
+        width: 100%;
+
+        max-width: 280px;
+
+        text-align: center;
+    }
+
+
+    /* Section headings */
+
+    .services h2,
+    .about h2,
+    .stylists h2,
+    .gallery h2,
+    .contact h2 {
+        font-size: 32px;
+    }
+
+
+   /* =========================
+   SERVICES DROPDOWN
+========================= */
+
+.services-dropdown {
+    position: relative;
+}
+
+.services-dropdown-link {
+    display: block;
+    color: white;
+    text-decoration: none;
+}
+
+.services-dropdown-link:hover {
+    color: #e8d8cc;
+}
+
+.services-dropdown-menu {
+    display: none;
+
+    position: absolute;
+
+    top: 100%;
+    left: 0;
+
+    min-width: 220px;
+
+    background: #222;
+
+    padding: 10px 0;
+
+    border-radius: 5px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+
+    z-index: 9999;
+}
+
+.services-dropdown-menu a {
+    display: block;
+
+    width: 100%;
+
+    padding: 12px 18px;
+
+    color: white !important;
+
+    text-decoration: none;
+}
+
+.services-dropdown-menu a:hover {
+    background: #444;
+
+    color: #e8d8cc !important;
+}
+
+
+/* Show dropdown when mouse is over Services */
+
+.services-dropdown:hover .services-dropdown-menu {
+    display: block;
+}
+
+    /* About */
+
+    .about {
+        padding: 70px 20px;
+    }
+
+
+    /* Stylists */
+
+    .stylists {
+        padding: 70px 20px;
+    }
+
+    .stylist-card {
+        width: 100%;
+
+        max-width: 350px;
+    }
+
+
+    /* Gallery */
+
+    .gallery {
+        padding: 70px 20px;
+    }
+
+    .gallery-container {
+        width: 100%;
+
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+    .gallery-item img {
+        width: 100%;
+
+        height: 300px;
+    }
+
+
+    /* Contact */
+
+    .contact {
+        padding: 70px 20px;
+    }
+
+
+    /* Booking search */
+
+    .booking-search {
+        flex-direction: column;
+    }
+
+    .booking-search input {
+        width: 100%;
+    }
+
+
+    /* Background */
+
+    .background {
+        background-attachment: scroll;
+
+        background-position: center;
+    }
+}
+
+
+
+
+
+
+
+
+/* ==========================================================
+   My Salon: login / sign in / sign up / verification / booking
+   Palette taken from the site: warm beige section, off-white
+   page, dark charcoal text.
+   ========================================================== */
+
+:root {
+  --beige:        #e8d9cc;   /* About Us section */
+  --beige-deep:   #d9c4b3;   /* borders, hover */
+  --page:         #f9f5f2;   /* page background */
+  --surface:      #ffffff;   /* cards, inputs */
+  --ink:          #2b2426;   /* headings, text */
+  --ink-soft:     #6f6265;   /* hints, secondary text */
+  --accent:       #3a2a2e;   /* primary buttons */
+  --accent-hover: #241a1d;
+  --focus:        #9a5b6c;   /* focus ring */
+  --error:        #b3261e;
+  --error-bg:     #fdecea;
+  --success:      #2e6b4a;
+  --success-bg:   #e8f4ec;
+
+  --radius:    12px;
+  --radius-lg: 18px;
+  --font: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+/* ---------- Page wrapper ---------- */
+.auth-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 32px 16px;
+  background: var(--page);
+  font-family: var(--font);
+  color: var(--ink);
+}
+
+/* ---------- Card ---------- */
+.auth-card,
+.booking-card {
+  width: 100%;
+  background: var(--surface);
+  border: 1px solid var(--beige-deep);
+  border-radius: var(--radius-lg);
+  padding: 40px 36px;
+  box-shadow: 0 10px 30px rgba(58, 42, 46, 0.08);
+}
+.auth-card    { max-width: 440px; }
+.booking-card { max-width: 680px; }
+
+.auth-title {
+  margin: 0 0 8px;
+  font-size: 1.85rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+}
+.auth-subtitle {
+  margin: 0 0 28px;
+  color: var(--ink-soft);
+  font-size: 0.98rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* ---------- Form basics ---------- */
+.auth-form,
+.booking-form { display: grid; gap: 18px; }
+
+.form-group { display: grid; gap: 6px; }
+
+.form-label {
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  padding: 13px 14px;
+  font: inherit;
+  color: var(--ink);
+  background: var(--page);
+  border: 1.5px solid var(--beige-deep);
+  border-radius: var(--radius);
+  transition: border-color 0.15s, box-shadow 0.15s, background 0.15s;
+}
+.form-textarea { min-height: 110px; resize: vertical; }
+
+.form-input::placeholder,
+.form-textarea::placeholder { color: #a99b9e; }
+
+.form-input:hover,
+.form-select:hover,
+.form-textarea:hover { border-color: #c4a994; }
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  outline: none;
+  background: var(--surface);
+  border-color: var(--focus);
+  box-shadow: 0 0 0 4px rgba(154, 91, 108, 0.18);
+}
+
+.form-hint  { font-size: 0.85rem; color: var(--ink-soft); }
+.form-error { font-size: 0.85rem; color: var(--error); }
+
+.form-input.is-invalid,
+.form-select.is-invalid,
+.form-textarea.is-invalid {
+  border-color: var(--error);
+  background: var(--error-bg);
+}
+
+/* Two fields side by side (first/last name, date/time) */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* ---------- Password field with show/hide button ---------- */
+.password-wrap { position: relative; }
+.password-wrap .form-input { padding-right: 76px; }
+.toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+  padding: 6px 10px;
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+  background: none;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.toggle-password:hover { color: var(--ink); background: var(--beige); }
+
+/* ---------- Checkbox / remember me row ---------- */
+.form-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 0.9rem;
+}
+.checkbox-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+.checkbox-label input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--accent);
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 22px;
+  font: inherit;
+  font-weight: 600;
+  border: 1.5px solid transparent;
+  border-radius: var(--radius);
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.15s, border-color 0.15s, transform 0.05s;
+}
+.btn:active { transform: translateY(1px); }
+.btn:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+.btn-block { width: 100%; }
+
+.btn-primary { background: var(--accent); color: #fff; }
+.btn-primary:hover { background: var(--accent-hover); }
+
+.btn-secondary {
+  background: transparent;
+  color: var(--ink);
+  border-color: var(--beige-deep);
+}
+.btn-secondary:hover { background: var(--beige); }
+
+.btn[disabled],
+.btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* ---------- Links and footer text ---------- */
+.auth-link,
+.auth-footer a {
+  color: var(--focus);
+  font-weight: 600;
+  text-decoration: none;
+}
+.auth-link:hover,
+.auth-footer a:hover { text-decoration: underline; }
+
+.auth-footer {
+  margin: 24px 0 0;
+  text-align: center;
+  font-size: 0.93rem;
+  color: var(--ink-soft);
+}
+
+/* ---------- Messages ---------- */
+.alert {
+  padding: 12px 14px;
+  border-radius: var(--radius);
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+.alert-error   { color: var(--error);   background: var(--error-bg); }
+.alert-success { color: var(--success); background: var(--success-bg); }
+
+/* ==========================================================
+   Sign up verification (6-digit code)
+   Markup: <div class="otp-group"> <input class="otp-input" maxlength="1"> x6 </div>
+   ========================================================== */
+.otp-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 4px 0 8px;
+}
+.otp-input {
+  width: 52px;
+  height: 60px;
+  padding: 0;
+  font: inherit;
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--ink);
+  background: var(--page);
+  border: 1.5px solid var(--beige-deep);
+  border-radius: var(--radius);
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.otp-input:focus {
+  outline: none;
+  background: var(--surface);
+  border-color: var(--focus);
+  box-shadow: 0 0 0 4px rgba(154, 91, 108, 0.18);
+}
+.otp-input.is-invalid { border-color: var(--error); background: var(--error-bg); }
+
+.resend-text {
+  text-align: center;
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+}
+.resend-btn {
+  padding: 0;
+  font: inherit;
+  font-weight: 600;
+  color: var(--focus);
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+.resend-btn:hover { text-decoration: underline; }
+.resend-btn:disabled { color: var(--ink-soft); cursor: not-allowed; text-decoration: none; }
+
+/* ==========================================================
+   Booking form
+   ========================================================== */
+.booking-section-title {
+  margin: 6px 0 0;
+  padding-bottom: 8px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border-bottom: 1px solid var(--beige);
+}
+
+/* Service picker: radio inputs styled as selectable cards.
+   Markup:
+   <label class="option-card">
+     <input type="radio" name="service" value="cut">
+     <span class="option-body">
+       <span class="option-name">Haircut</span>
+       <span class="option-meta">45 min</span>
+     </span>
+   </label>                                                    */
+.option-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 12px;
+}
+.option-card { position: relative; cursor: pointer; }
+.option-card input {
+  position: absolute;
+  opacity: 0;
+  inset: 0;
+  cursor: pointer;
+}
+.option-body {
+  display: grid;
+  gap: 2px;
+  padding: 14px 16px;
+  background: var(--page);
+  border: 1.5px solid var(--beige-deep);
+  border-radius: var(--radius);
+  transition: border-color 0.15s, background 0.15s, box-shadow 0.15s;
+}
+.option-name { font-weight: 600; }
+.option-meta { font-size: 0.85rem; color: var(--ink-soft); }
+
+.option-card:hover .option-body { border-color: #c4a994; }
+.option-card input:checked + .option-body {
+  background: var(--beige);
+  border-color: var(--accent);
+  box-shadow: inset 0 0 0 1px var(--accent);
+}
+.option-card input:focus-visible + .option-body {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+/* Time slots: same radio trick, smaller chips.
+   Markup: <label class="slot"><input type="radio" name="time"><span>10:30 AM</span></label> */
+.time-slots {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(96px, 1fr));
+  gap: 10px;
+}
+.slot { position: relative; cursor: pointer; }
+.slot input { position: absolute; opacity: 0; inset: 0; cursor: pointer; }
+.slot span {
+  display: block;
+  padding: 10px 8px;
+  text-align: center;
+  font-size: 0.92rem;
+  background: var(--page);
+  border: 1.5px solid var(--beige-deep);
+  border-radius: 10px;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+.slot:hover span { border-color: #c4a994; }
+.slot input:checked + span {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+.slot input:focus-visible + span {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+.slot input:disabled + span {
+  opacity: 0.45;
+  text-decoration: line-through;
+  cursor: not-allowed;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 560px) {
+  .auth-card,
+  .booking-card { padding: 28px 20px; border-radius: 14px; }
+  .form-row { grid-template-columns: 1fr; }
+  .otp-group { gap: 8px; }
+  .otp-input { width: 44px; height: 54px; font-size: 1.4rem; }
+}
+
+/* ---------- Respect reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}

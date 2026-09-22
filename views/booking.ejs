@@ -1,0 +1,244 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book Appointment - My Salon</title>
+
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+    <main class="auth-page">
+
+        <section class="booking-card">
+
+            <!-- Heading -->
+            <h1 class="auth-title">
+                Book an Appointment
+            </h1>
+
+            <p class="auth-subtitle">
+                Choose your service and preferred appointment time.
+            </p>
+
+
+            <!-- Booking Form -->
+            <form action="/booking" method="POST" class="booking-form">
+
+
+                <!-- Customer Information -->
+                <h2 class="booking-section-title">
+                    Your Information
+                </h2>
+
+
+                <!-- Name -->
+                <div class="form-group">
+
+                    <label for="name" class="form-label">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        class="form-input"
+                        placeholder="Enter your full name"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Email -->
+                <div class="form-group">
+
+                    <label for="email" class="form-label">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        class="form-input"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Phone -->
+                <div class="form-group">
+
+                    <label for="phone" class="form-label">
+                        Phone Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        class="form-input"
+                        placeholder="Enter your phone number"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Service -->
+                <h2 class="booking-section-title">
+                    Choose a Service
+                </h2>
+
+
+                <div class="form-group">
+
+                    <label for="service" class="form-label">
+                        Service
+                    </label>
+
+                    <select
+                        id="service"
+                        name="service"
+                        class="form-select"
+                        required
+                    >
+
+                        <option value="">
+                            Select a service
+                        </option>
+
+                        <option value="Braiding">
+                            Braiding
+                        </option>
+
+                        <option value="Haircuts">
+                            Haircuts
+                        </option>
+
+                        <option value="Hair Coloring">
+                            Hair Coloring
+                        </option>
+
+                        <option value="Hair Treatment">
+                            Hair Treatment
+                        </option>
+
+                        <option value="Manicure">
+                            Manicure
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Date and Time -->
+                <h2 class="booking-section-title">
+                    Appointment Date & Time
+                </h2>
+
+
+                <div class="form-row">
+
+                    <!-- Date -->
+                    <div class="form-group">
+
+                        <label for="date" class="form-label">
+                            Date
+                        </label>
+
+                        <input
+                            type="date"
+                            id="date"
+                            name="date"
+                            class="form-input"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Time -->
+                    <div class="form-group">
+
+                        <label for="time" class="form-label">
+                            Time
+                        </label>
+
+                        <input
+                            type="time"
+                            id="time"
+                            name="time"
+                            class="form-input"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- Payment -->
+                <h2 class="booking-section-title">
+                    Payment Method
+                </h2>
+
+
+                <div class="form-group">
+
+                    <label for="paymentMethod" class="form-label">
+                        Select Payment Method
+                    </label>
+
+                    <select
+                        id="paymentMethod"
+                        name="paymentMethod"
+                        class="form-select"
+                        required
+                    >
+
+                        <option value="">
+                            Select payment method
+                        </option>
+
+                        <option value="Bank Transfer">
+                            Bank Transfer
+                        </option>
+
+                        <option value="Pay at Salon">
+                            Pay at Salon
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Submit -->
+                <button
+                    type="submit"
+                    class="btn btn-primary btn-block">
+                    Book Appointment
+                </button>
+
+
+            </form>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>
+```

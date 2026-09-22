@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login - My Salon</title>
+
+    <!-- Your main CSS -->
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+<% if (error && error.length > 0) { %>
+    <div class="error-message">
+        <%= error %>
+    </div>
+<% } %>
+
+
+    <main class="auth-page">
+
+        <section class="auth-card">
+
+            <!-- Salon name -->
+            <h1 class="auth-title">
+                My Salon
+            </h1>
+
+            <p class="auth-subtitle">
+                Sign in to manage your appointments
+            </p>
+
+
+            <!-- Login form -->
+            <form action="/login" method="POST" class="auth-form">
+
+                <div class="form-group">
+
+                    <label for="email" class="form-label">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        class="form-input"
+                        placeholder="Enter your email"
+                        autocomplete="email"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="password" class="form-label">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        class="form-input"
+                        placeholder="Enter your password"
+                        autocomplete="current-password"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Login button -->
+                <button
+                    type="submit"
+                    class="btn btn-primary btn-block">
+                    Log in
+                </button>
+
+            </form>
+
+
+            <!-- Sign up section -->
+            <div class="auth-footer">
+
+                Don't have an account?
+
+                <a href="/signup" class="auth-link">
+                    Sign up
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+<script src="/script.js"></script>
+</body>
+
+</html>
+

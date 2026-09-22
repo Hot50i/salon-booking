@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Salon</title>
+
+    <link rel="stylesheet" href="/style.css">
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+</head>
+
+<body>
+
+   <% if (success && success.length > 0) { %>
+    <div class="flash-message">
+        <%= success %>
+    </div>
+<% } %>
+
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav class="navbar navbar-expand-lg main-nav">
+
+    <div class="container-fluid">
+
+        <!-- Logo -->
+
+        <a href="/" class="navbar-brand logo">
+            My Salon
+        </a>
+
+
+        <!-- Hamburger Button -->
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#salonNavigation"
+            aria-controls="salonNavigation"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+        >
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <!-- Navigation Links -->
+
+        <div
+            class="collapse navbar-collapse"
+            id="salonNavigation"
+        >
+
+            <div class="nav-links">
+
+                <a href="/">
+                    Home
+                </a>
+
+                <a href="/admin-login">
+                    Admin Dashboard
+                </a>
+
+
+              <div class="services-dropdown">
+
+    <a href="#services" class="services-dropdown-link">
+        Services ▾
+    </a>
+
+    <div class="services-dropdown-menu">
+
+        <a href="#services">Braiding</a>
+
+        <a href="#services">Haircuts</a>
+
+        <a href="#services">Hair Coloring</a>
+
+        <a href="#services">Hair Treatment</a>
+
+        <a href="#services">Manicure</a>
+
+    </div>
+
+</div>
+
+
+                <a href="#about">
+                    About Us
+                </a>
+
+                <a href="#stylists">
+                    Stylists
+                </a>
+
+                <a href="#gallery">
+                    Gallery
+                </a>
+
+                <a href="#contact">
+                    Contact
+                </a>
+
+
+                <!-- Login / User -->
+
+                <% if (userName) { %>
+
+                    <p class="welcome-user">
+                        Welcome, <%= userName %> 👋
+                    </p>
+
+                    <a
+                        href="/logout"
+                        class="logout-btn"
+                    >
+                        Logout
+                    </a>
+
+                <% } else { %>
+
+                    <a href="/login">
+                        Login
+                    </a>
+
+                    <a href="/signup">
+                        Sign Up
+                    </a>
+
+                <% } %>
+
+
+                <!-- Book Appointment -->
+
+                <a
+                    href="/booking"
+                    class="nav-book-btn"
+                >
+                    Book Appointment
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero background">
+
+    <div class="hero-content">
+
+        <p class="hero-small">
+            WELCOME TO MY SALON
+        </p>
+
+        <h1>
+            Look Good.<br>
+            Feel Beautiful.
+        </h1>
+
+        <p>
+            Professional hair and beauty services
+            made just for you.
+        </p>
+
+        <a
+            href="/booking"
+            class="btn"
+        >
+            Book Appointment
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SERVICES
+========================= -->
+
+<section
+    class="services"
+    id="services"
+>
+
+    <p class="section-small">
+        WHAT WE OFFER
+    </p>
+
+    <h2>
+        Our Services
+    </h2>
+
+    <p class="section-description">
+        Professional beauty services designed
+        to make you look and feel your best.
+    </p>
+
+
+    <div class="service-container">
+
+
+        <!-- Braiding -->
+
+        <div class="service-card">
+
+            <img
+                src="https://i.pinimg.com/736x/2a/a7/07/2aa70757381180e3e87ca403a20259e7.jpg"
+                alt="Braiding"
+            >
+
+            <h3>
+                Braiding
+            </h3>
+
+            <p>
+                Beautiful professional braids
+                created to match your style.
+            </p>
+
+            <strong>
+                $50
+            </strong>
+
+        </div>
+
+
+        <!-- Passion Twists -->
+
+        <div class="service-card">
+
+            <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWSYTsJi_BGkS5AFCaiytsHrHsVfBhkx6jZvGdlMv_cDFCby7bXOUKmVQ&s=10"
+                alt="Passion Twists"
+            >
+
+            <h3>
+                Passion Twists
+            </h3>
+
+            <p>
+                Professional styling for
+                a beautiful and fresh look.
+            </p>
+
+            <strong>
+                $25
+            </strong>
+
+        </div>
+
+
+        <!-- Manicure -->
+
+        <div class="service-card">
+
+            <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeKe02tKAk9iyqeFNSzd16vBHaA5FCgQXoMo7pvdbPwsm766IrFST_kfU&s=10"
+                alt="Manicure"
+            >
+
+            <h3>
+                Manicure
+            </h3>
+
+            <p>
+                Professional nail care
+                for beautiful hands.
+            </p>
+
+            <strong>
+                $20
+            </strong>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     GALLERY
+========================= -->
+
+<section
+    class="gallery"
+    id="gallery"
+>
+
+    <p class="section-small">
+        OUR WORK
+    </p>
+
+    <h2>
+        Our Hairstyles
+    </h2>
+
+    <p class="section-description">
+        Explore some of our popular hairstyles
+        and beauty services.
+    </p>
+
+
+    <div class="gallery-container">
+
+
+        <!-- Round Cut -->
+
+        <div class="gallery-item">
+
+            <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTA9m1Ju2Tsko4Ayz7Svy4xSmeL1r9hMjEfK-LYB5cbA&s=10"
+                alt="Round Cut"
+            >
+
+            <h3>
+                Round Cut
+            </h3>
+
+        </div>
+
+
+        <!-- Low Cut -->
+
+        <div class="gallery-item">
+
+            <img
+                src="/WhatsApp Image .jpg"
+                alt="Low Cut hairstyle"
+            >
+
+            <h3>
+                Low Cut
+            </h3>
+
+        </div>
+
+
+        <!-- Fulani Braids -->
+
+        <div class="gallery-item">
+
+            <img
+                src="https://i.pinimg.com/736x/2a/a7/07/2aa70757381180e3e87ca403a20259e7.jpg"
+                alt="Fulani Braids"
+            >
+
+            <h3>
+                Fulani Braids
+            </h3>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         STYLISTS
+    ========================= -->
+
+    <section
+        class="stylists"
+        id="stylists"
+    >
+
+        <p class="section-small">
+            OUR TEAM
+        </p>
+
+        <h2>
+            Meet Our Stylists
+        </h2>
+
+
+        <div class="stylist-container">
+
+
+            <div class="stylist-card">
+
+                <div class="stylist-image">
+
+                    <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV_SQeLFA93B9JDEKlr5iSvUtkVzHS8i5Ukyhc6x0kmQ&s=10"
+                        alt="Sarah - Stylist"
+                    >
+
+                </div>
+
+                <h3>
+                    Sarah
+                </h3>
+
+                <p>
+                    Hair Specialist
+                </p>
+
+            </div>
+
+
+            <div class="stylist-card">
+
+                <div class="stylist-image">
+
+                    <img
+                        src="https://ichef.bbci.co.uk/ace/ws/800/cpsprodpb/9067/live/7e274d10-e597-11ec-8935-4f1eb8b88d37.jpg.webp"
+                        alt="Jessica - Stylist"
+                    >
+
+                </div>
+
+                <h3>
+                    Jessica
+                </h3>
+
+                <p>
+                    Braiding Specialist
+                </p>
+
+            </div>
+
+
+            <div class="stylist-card">
+
+                <div class="stylist-image">
+
+                    <img
+                        src="https://penpress.ng/wp-content/uploads/2024/07/IMG-20240703-WA0018.jpg"
+                        alt="Tega - Stylist"
+                    >
+
+                </div>
+
+                <h3>
+                    Tega
+                </h3>
+
+                <p>
+                    Beauty Specialist
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             ABOUT
+        ========================= -->
+
+        <section
+            class="about"
+            id="about"
+        >
+
+            <div class="about-content">
+
+                <p class="section-small">
+                    ABOUT US
+                </p>
+
+                <h2>
+                    Beauty Is Our Passion
+                </h2>
+
+                <p>
+                    At My Salon, we believe everyone deserves
+                    to feel confident and beautiful.
+                </p>
+
+                <p>
+                    Our professional stylists provide quality
+                    hair and beauty services in a comfortable
+                    environment.
+                </p>
+
+                <a
+                    href="/booking"
+                    class="btn"
+                >
+                    Book Your Appointment
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CONTACT
+        ========================= -->
+
+        <section
+            id="contact"
+            class="contact-section"
+        >
+
+            <div class="contact-container">
+
+                <h2>
+                    Contact Us
+                </h2>
+
+                <p>
+                    Have a question or want to book an appointment?
+                    We'd love to hear from you.
+                </p>
+
+
+                <!-- WhatsApp -->
+
+                <div class="contact-item">
+
+                    <h3>
+                        WhatsApp
+                    </h3>
+
+                    <p>
+                        Chat with us directly on WhatsApp.
+                    </p>
+
+                    <a
+                        href="https://wa.me/2347033858368"
+                        target="_blank"
+                        class="whatsapp-button"
+                    >
+                        Chat on WhatsApp
+                    </a>
+
+                </div>
+
+
+                <!-- Email -->
+
+                <div class="contact-item">
+
+                    <h3>
+                        Email
+                    </h3>
+
+                    <p>
+
+                        <a href="mailto:Alvinwilliton@gmail.com">
+                            Alvinwilliton@gmail.com
+                        </a>
+
+                    </p>
+
+                </div>
+
+
+                <!-- Location -->
+
+                <div class="contact-item">
+
+                    <h3>
+                        Location
+                    </h3>
+
+                    <p>
+
+                INGRAM Cut Hair Studio<br>
+                Ogoh Street Off Evueta,
+                Close to Celestial Church,
+                Ughelli,Delta state.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+></script>
+
+<script src="/script.js"></script>
+
+
+
+   
+</body>
+
+</html>
