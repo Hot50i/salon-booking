@@ -1,3 +1,6 @@
+const dns = require("dns");
+dns.setServers(["1.1.1.1", "8.8.8.8"]);
+
 require("dotenv").config();
 
 const express = require("express");
@@ -16,7 +19,7 @@ const app = express();
 // MONGODB
 // =========================
 
-mongoose.connect("mongodb://127.0.0.1:27017/salonBooking")
+mongoose.connect(process.env.MONGO_URI)
     .then(() => {
         console.log("MongoDB connected");
     })
