@@ -304,7 +304,7 @@ app.post("/signup", async (req, res) => {
         await transporter.sendMail({
 
             from:
-                `"Ingram Cut Hair Studio" <${process.env.EMAIL}>`,
+                `"Ingram Cut Hair Studio" <${process.env.EMAIL_FROM}>`,
 
             to: email,
 
@@ -584,7 +584,7 @@ app.post("/booking", isLogin, async (req, res) => {
         await transporter.sendMail({
 
             from:
-                `"Ingram Cut Hair Studio" <${process.env.EMAIL}>`,
+                `"Ingram Cut Hair Studio" <${process.env.EMAIL_FROM}>`,
 
             to: booking.email,
 
@@ -916,7 +916,7 @@ app.post(
             await transporter.sendMail({
 
                 from:
-                    `"Ingram Cut Hair Studio" <${process.env.EMAIL}>`,
+                    `"Ingram Cut Hair Studio" <${process.env.EMAIL_FROM}>`,
 
                 to: booking.email,
 
@@ -1075,7 +1075,7 @@ app.post(
             await transporter.sendMail({
 
                 from:
-                    `"Ingram Cut Hair Studio" <${process.env.EMAIL}>`,
+                    `"Ingram Cut Hair Studio" <${process.env.EMAIL_FROM}>`,
 
                 to: booking.email,
 
@@ -1158,7 +1158,7 @@ app.post(
             await transporter.sendMail({
 
                 from:
-                    `"Ingram Cut Hair Studio" <${process.env.EMAIL}>`,
+                    `"Ingram Cut Hair Studio" <${process.env.EMAIL_FROM}>`,
 
                 to: booking.email,
 
